@@ -101,7 +101,11 @@ export default function SignupForm() {
     )
 }
 
+//HOMEWORK
 
-
+// (mandatory)
 // put image on left side of signup form
 // on right side, match colors and texts for form
+
+//(optional)
+// find out what is a github pull request

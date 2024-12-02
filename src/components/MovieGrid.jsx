@@ -1,29 +1,26 @@
-
-/* eslint-disable react/prop-types */
-import styles from "./movie.module.css"
-export default function MovieGrid({ movie, selected, setSelected }) {
-    const handleSelection = () => {
-        if (selected.includes(movie.label)) {
-            setSelected(selected.filter(item => item !== movie.label))
-        } else {
-            setSelected([...selected, movie.label])
-        }
+import "./MovieStyle.css";
+function MovieGrid({ movie, selected, setSelected }) {
+  const handleSelection = () => {
+    if (selected.includes(movie.label)) {
+      setSelected(selected.filter((item) => item !== movie.label));
+    } else {
+      setSelected([...selected, movie.label]);
     }
-    const generateBorder = (label) => {
-        if (selected.includes(label)) {
-            return "2px solid green"
-        }
-        return "2px solid black"
+  };
+  const generateBorder = (label) => {
+    if (selected.includes(label)) {
+      return "5px solid green";
     }
-    return (
-        <div style={{
-            border: generateBorder(movie.label),
-        }} onClick={handleSelection} className={styles.movie_box}>
-            <img src={movie.image} alt={movie.label} />
-            <h2>{movie.label}</h2>
-        </div>
-    )
+    return "2px solid black";
+  };
+  return (
+    <div style={{border: generateBorder(movie.label),backgroundColor:movie.background}} onClick={handleSelection} className="movie_box">
+<h2 className="movie-label">{movie.label}</h2>
+      <img className="img-movie" src={movie.image} />
+    </div>
+  );
 }
+export default MovieGrid;
 
 // 1. if movie is not in selected array, add it
 // 2. if movie is in selected array, remove it

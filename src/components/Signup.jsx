@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Signup.css";
+import { useNavigate } from "react-router-dom";
 function Signup() {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,6 +16,7 @@ function Signup() {
     username: false,
     tandcond: false,
   });
+  const navigate = useNavigate();
   function submitHandler(event) {
     event.preventDefault();
     const { name, email, mobile, username, termsAndConditions } = formData;
@@ -51,6 +53,8 @@ function Signup() {
         return { ...prevState, termsAndConditions: true };
       });
     }
+    localStorage.setItem("user", JSON.stringify(formData));
+    navigate("/movies");
   }
   function changHandler(event) {
     const { name, type, value, checked } = event.target;

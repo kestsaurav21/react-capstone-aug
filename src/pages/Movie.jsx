@@ -79,7 +79,7 @@ function Movie() {
     }
     else {
       localStorage.setItem("selected", JSON.stringify(selected));
-      navigate("/recommendation");
+      navigate("/widgets");
     }
   }
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MovieGrid from "../components/MovieGrid";
-import MovieChip from "../components/movieChip";
+import MovieChip from '../Component/MovieChip'
+import MovieGrid from '../Component/MovieGrid'
 import './Movie.css'
 import action from '../Image/Action.png'
 import drama from '../Image/Drama.png'
@@ -11,7 +11,7 @@ import music from '../Image/Music.png'
 import romance from '../Image/Romance.png'
 import thriller from '../Image/Thriller.png'
 import western from '../Image/Western.png'
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 const MOVIES = [
   {
     value: "action",

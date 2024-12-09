@@ -11,12 +11,12 @@ export default function UserInfo() {
         </div>
         <div>
           <div>
-            <p className="Info-signup">{user.name}</p>
-            <p className="Info-signup">{user.email}</p>
-            <p className="Info-para">{user.username}</p>
+            <p className="Info-signup">{user?.name}</p>
+            <p className="Info-signup">{user?.email}</p>
+            <p className="Info-para">{user?.username}</p>
           </div>
           <div >
-            {movies.map((movie, idx) => (
+            {movies?.map((movie, idx) => (
               <p className="Info-btn" key={idx}>{movie}</p>
             ))}
           </div>

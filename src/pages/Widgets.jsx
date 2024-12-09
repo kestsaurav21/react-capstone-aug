@@ -9,14 +9,14 @@ export default function Widgets() {
     return (
         <div className="wid-group">
             <div className="wid-style">
-            <UserInfo/>
-            <Note/>
-            <News/>
-            <Weather/>
-            <Timer duration={24*60*60*1000}/>
-            <Browser/>
+                <UserInfo />
+                <Note />
+                {/* <News/> */}
+                {/* <Weather/> */}
+                <Timer duration={24 * 60 * 60 * 1000} />
+                <Browser />
             </div>
-            
+
         </div>
     );
 }
